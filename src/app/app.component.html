@@ -1,11 +1,3 @@
-<?php
-  session_start();
-  phpinfo();
-  
-  require 'config.php';
-  $_SESSION['loggedin'] = false;
-  $_SESSION['username'] = 'Ahmed';
-?>
 <head>
   <title>Game getter</title>
   
@@ -24,16 +16,12 @@
   <div class="background">
     <div id="header" style="display: flex; text-align: center;">
       <div id="header_logo"><a routerLink="/" aria-label="Go to Home"><img src="favicon.ico" alt="Website icon" width="60px"></a></div>
-      <form style="flex: 15; overflow: hidden;">
-        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
-          <a class="sign_up_header_button" (click)="goToSignUp()">Sign Up</a>
-        <?php else: ?>
-          <a class="header_button" (click)="goToSignUp()">Logout</a>
-        <?php endif; ?>
-        <a class="header_button">Running events</a> 
-        <a class="header_button">Available bookings</a> 
-        <a class="header_button">Book an apointments</a> 
-      </form>
+      <div style="flex: 15; overflow: hidden;">
+        <button class="sign_up_header_button">Sign up</button> 
+        <button class="header_button">Button example 2</button> 
+        <button class="header_button">Button example 3</button> 
+        <button class="header_button">Button example 4</button> 
+      </div>
       <div id="user-icon" style="flex: 1; overflow: hidden;"><a><img src="default user icon.png" alt="Website icon" width="60px"></a></div>
     </div>
     <div>
